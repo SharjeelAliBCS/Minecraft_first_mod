@@ -1,5 +1,8 @@
 package com.LordofArbiters.firstmod;
 
+import com.LordofArbiters.firstmod.items.ModItems;
+import com.LordofArbiters.firstmod.items.WeirdGem;
+import com.LordofArbiters.firstmod.items.WeirdPen;
 import com.LordofArbiters.firstmod.setup.ClientProxy;
 import com.LordofArbiters.firstmod.blocks.WeirdBlock;
 import com.LordofArbiters.firstmod.blocks.ModBlocks;
@@ -50,15 +53,13 @@ public class FirstMod
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             blockRegistryEvent.getRegistry().register(new WeirdBlock());
-
-            // register a new block here
             LOGGER.info("HELLO from Register BlockOne");
         }
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
+            itemRegistryEvent.getRegistry().register(new WeirdGem());
+            itemRegistryEvent.getRegistry().register(new WeirdPen());
             itemRegistryEvent.getRegistry().register(new BlockItem(ModBlocks.WEIRD_BLOCK, new Item.Properties()).setRegistryName("weird_block"));
-
-            // register a new block here
             LOGGER.info("HELLO from Register BlockOne");
         }
     }

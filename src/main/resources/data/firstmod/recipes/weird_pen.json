@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "firstmod",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:weird_gem"
+    }
+  },
+  "result": {
+    "item": "firstmod:weird_pen"
+  }
+}
